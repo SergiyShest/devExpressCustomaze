@@ -37,10 +37,8 @@ $("#buttonContainer").dxButton({
     text: "Get Filtered",
     onClick: function (e) {
         var grid = $("#grid").dxDataGrid("instance"),
-            filter = grid.getCombinedFilter();
-
+        filter = grid.getCombinedFilter();
         processFilter(grid, filter);
-
         alert(filter);
     }
 }).dxButton("instance");
@@ -63,19 +61,6 @@ function getColumnFieldName(dataGridInstance, getter) {
 }
 
 
-
-    $("#selectStatus").dxSelectBox({
-
-        dataSource: statuses,
-        value: statuses[0],
-        onValueChanged: function (data) {
-            var dataGrid = $('#grid').dxDataGrid('instance');
-            if (data.value == "All")
-                dataGrid.clearFilter();
-            else
-                dataGrid.filter(["ShipCountry", "=", data.value]);
-        }
-    });
 
 
     $("#grid").dxDataGrid({

@@ -11,46 +11,87 @@
     <link rel="stylesheet" type="text/css" href="Content/dx.greenmist.css" />
 </head>
 <script>
-    function selRow()
-    {
-        var dataGrid = $('#grid').dxDataGrid('instance');
-        var selectedRows = dataGrid.getSelectedRowsData();
-        var res = '';
-        for (i = 0; i < selectedRows.length; i++) { res += selectedRows[i]['OrderID']+',' } 
-        alert(res);
+    var dataGrid;
+    var filterA = new Array();
+    var filterB = new Array();
+    function init() {
+
+        dataGrid = $('#grid').dxDataGrid('instance');
+        $("#selectStatus").dxSelectBox({
+
+            dataSource: statuses,
+            value: statuses[0],
+            onValueChanged: function (data) {
+                if (data.value == "All") {
+                    filterB.clear();
+                    ff();
+                }
+                else {
+                    filterB[0] = ["ShipCountry", "=", data.value]
+                    ff();
+                }
+            }
+        });
+        return;
+        var dataSource = DevExpress.data.AspNet.createStore({
+            key: "OrderID",
+            loadUrl: "Orders/Get",
+            insertUrl: "Orders/Post",
+            updateUrl: "Orders/Put",
+            deleteUrl: "Orders/Delete"
+        });
+        dataSource.load();
+        n.dataSource = dataSource;
+        //var dataGridDataSource = dataGrid.getDataSource();
+        // dataGridDataSource.load();
     }
+
     function Filter1() {
-        var dataGrid = $('#grid').dxDataGrid('instance');
-        dataGrid.filter([["OrderID", ">", "400"], "and", ["OrderID", '<', "10250"]]);
-
+        filterA[0] = [["OrderID", ">", "400"], "and", ["OrderID", '<', "10250"]];
+        ff();
     }
-    function Filter2() {
-        var dataGrid = $('#grid').dxDataGrid('instance');
-        dataGrid.filter([["OrderID", ">", "10250"], "and", ["OrderID", '<', "10500"]]);
 
+    function Filter2() {
+
+        filterA[0] = [["OrderID", ">", "10250"], "and", ["OrderID", '<', "10500"]];
+        ff();
     }
     function Filter3() {
-        var dataGrid = $('#grid').dxDataGrid('instance');
-        dataGrid.filter([["OrderID", ">", "10500"], "and", ["OrderID", '<', "11000"]]);
-
+        filterA[0] = [["OrderID", ">", "10500"], "and", ["OrderID", '<', "11000"]];
+        ff();
     }
-    function Filter4() {
-        var dataGrid = $('#grid').dxDataGrid('instance');
-        dataGrid.filter([["OrderID", ">", "11000"], "and", ["OrderID", '<', "10500"]]);
-        for (i = 0; i < filter.length; i++) {
-            filter
 
+    function ff() {
+        var filter;
+        if (filterA.length > 0 && filterB.length > 0) {
+            filter = filterA.concat("and").concat(filterB);
+            dataGrid.filter(filter);
         }
-        $('#inpID').val('bla');
+        else {
+            if (filterA.length > 0) {
+                dataGrid.filter(filterA);
+            }
+            else {
+                dataGrid.filter(filterB);
+            }
+        }
     }
+
+
     function FilterClear() {
-        var dataGrid = $('#grid').dxDataGrid('instance');
+
+        filterA.clear()
         dataGrid.clearFilter();
 
     }
+    function find() {
+        dataGrid.refresh();
+    }
+
+
 
 </script>
-<body>
+<body onload="init()">
     <span>Header</span>
     <div class="right-side" style="color:aqua">
         <div id="selectStatus"></div>
@@ -64,10 +105,10 @@
     <button onclick="selRow()">see</button>
     <button onclick="Filter1()">OrderID", '<', "10250</button>
     <button onclick="Filter2()">OrderID", '<', "10500</button>
-    <button onclick="Filter3()">OrderID", '<', "10500</button>
+    <button onclick="Filter4()">4</button>
 
     <button onclick="FilterClear()">FilterClear</button>
-
+    <button onclick="find()">найти</button>
     <div id="grid"></div>
     <span>Futer</span>
 </body>

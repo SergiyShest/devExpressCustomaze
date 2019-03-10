@@ -172,6 +172,7 @@
     <Content Include="Content\dx.softblue.css" />
     <Content Include="Content\dx.spa.css" />
     <Content Include="Global.asax" />
+    <Content Include="Index2.html" />
     <Content Include="Index.html" />
     <Content Include="js\code.js" />
     <Content Include="Scripts\dx.all.js" />
