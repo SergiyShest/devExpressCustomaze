@@ -61,18 +61,16 @@ function getColumnFieldName(dataGridInstance, getter) {
 }
 
 
-
-
     $("#grid").dxDataGrid({
         height: 500,
         remoteOperations: { paging: true, filtering: true, sorting: true, grouping: true, summary: true, groupPaging: true },
 
         dataSource: DevExpress.data.AspNet.createStore({
             key: "OrderID",
-            loadUrl: "Orders/Get",
-            insertUrl: "Orders/Post",
-            updateUrl: "Orders/Put",
-            deleteUrl: "Orders/Delete"
+            loadUrl: "../Orders/Get",
+            insertUrl: "../Orders/Post",
+            updateUrl: "../Orders/Put",
+            deleteUrl: "../Orders/Delete"
         }),
         paging: {
             pageSize: 30

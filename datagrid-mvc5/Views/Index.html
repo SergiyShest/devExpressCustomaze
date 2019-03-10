@@ -3,35 +3,37 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
-    <script src="Scripts/iqery.min.js"></script>
-    <script src="Scripts/dx.all.js"></script>
-    <script src="Scripts/dx.aspnet.data.js"></script>
-    <script src="js/code.js"></script>
-    <link rel="stylesheet" type="text/css" href="Content/dx.common.css" />
-    <link rel="stylesheet" type="text/css" href="Content/dx.greenmist.css" />
+    <script src="../Scripts/iqery.min.js"></script>
+    <script src="../Scripts/dx.all.js"></script>
+    <script src="../Scripts/dx.aspnet.data.js"></script>
+    <script src="../js/code.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Content/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/dx.carmine.css" />
 </head>
 <script>
     var dataGrid;
     var filterA = new Array();
     var filterB = new Array();
+    var filterC = new Array();
     function init() {
 
         dataGrid = $('#grid').dxDataGrid('instance');
-        $("#selectStatus").dxSelectBox({
-
+        $("#selectStatus").dxSelectBox({//комбо бокс выбора страны
             dataSource: statuses,
             value: statuses[0],
             onValueChanged: function (data) {
                 if (data.value == "All") {
                     filterB.clear();
-                    ff();
+                    ApplayFilterChanges();
                 }
                 else {
                     filterB[0] = ["ShipCountry", "=", data.value]
-                    ff();
+                    ApplayFilterChanges();
                 }
             }
         });
+        
+       
         return;
         var dataSource = DevExpress.data.AspNet.createStore({
             key: "OrderID",
@@ -48,21 +50,22 @@
 
     function Filter1() {
         filterA[0] = [["OrderID", ">", "400"], "and", ["OrderID", '<', "10250"]];
-        ff();
+        ApplayFilterChanges();
     }
 
     function Filter2() {
 
         filterA[0] = [["OrderID", ">", "10250"], "and", ["OrderID", '<', "10500"]];
-        ff();
+        ApplayFilterChanges();
     }
     function Filter3() {
         filterA[0] = [["OrderID", ">", "10500"], "and", ["OrderID", '<', "11000"]];
-        ff();
+        ApplayFilterChanges();
     }
 
-    function ff() {
+    function ApplayFilterChanges() {
         var filter;
+
         if (filterA.length > 0 && filterB.length > 0) {
             filter = filterA.concat("and").concat(filterB);
             dataGrid.filter(filter);
@@ -85,10 +88,13 @@
 
     }
     function find() {
+
+        var inp = document.getElementById("inpIdFilter").value;
+
+        
         dataGrid.refresh();
     }
-
-
+       
 
 </script>
 <body onload="init()">
@@ -97,7 +103,7 @@
         <div id="selectStatus"></div>
     </div>
     <div class="right-side" style="color:aqua">
-        <input id="inpID"></input>
+        <input id="inpIdFilter"></input>
     </div>
     <div class="right-side" style="color:green">
         <div id="buttonContainer"></div>

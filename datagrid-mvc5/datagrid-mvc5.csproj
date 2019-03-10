@@ -142,38 +142,23 @@
     <Compile Include="Models\Supplier.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\dx.carmine.compact.css" />
     <Content Include="Content\dx.carmine.css" />
     <Content Include="Content\dx.common.css" />
-    <Content Include="Content\dx.contrast.compact.css" />
-    <Content Include="Content\dx.contrast.css" />
-    <Content Include="Content\dx.dark.compact.css" />
-    <Content Include="Content\dx.dark.css" />
-    <Content Include="Content\dx.darkmoon.compact.css" />
-    <Content Include="Content\dx.darkmoon.css" />
-    <Content Include="Content\dx.darkviolet.compact.css" />
-    <Content Include="Content\dx.darkviolet.css" />
-    <Content Include="Content\dx.greenmist.compact.css" />
-    <Content Include="Content\dx.greenmist.css" />
+    <Content Include="Content\grey.css" />
     <Content Include="Content\dx.ios7.default.css" />
     <Content Include="Content\dx.light.compact.css" />
     <Content Include="Content\dx.light.css" />
     <Content Include="Content\dx.material.blue.dark.css" />
     <Content Include="Content\dx.material.blue.light.css" />
-    <Content Include="Content\dx.material.lime.dark.css" />
     <Content Include="Content\dx.material.lime.light.css" />
-    <Content Include="Content\dx.material.orange.dark.css" />
     <Content Include="Content\dx.material.orange.light.css" />
-    <Content Include="Content\dx.material.purple.dark.css" />
     <Content Include="Content\dx.material.purple.light.css" />
-    <Content Include="Content\dx.material.teal.dark.css" />
     <Content Include="Content\dx.material.teal.light.css" />
-    <Content Include="Content\dx.softblue.compact.css" />
     <Content Include="Content\dx.softblue.css" />
     <Content Include="Content\dx.spa.css" />
     <Content Include="Global.asax" />
-    <Content Include="Index2.html" />
-    <Content Include="Index.html" />
+    <Content Include="Views\Index2.html" />
+    <Content Include="Views\Index.html" />
     <Content Include="js\code.js" />
     <Content Include="Scripts\dx.all.js" />
     <Content Include="Scripts\dx.aspnet.data.js" />
@@ -198,9 +183,6 @@
   <ItemGroup>
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\ackage-lock.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\icons\dxicons.ttf" />
