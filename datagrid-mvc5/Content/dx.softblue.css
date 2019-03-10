@@ -13330,3 +13330,18 @@
 .dx-htmleditor-toolbar-menu-separator {
   border-top-color: #e8eaeb;
 }
+.dx-datagrid-headers .dx-header-row {
+    background-color: yellow;
+}
+
+.dx-datagrid-headers {
+    background-color: gray;
+}
+
+.dx-editor-cell .dx-texteditor .dx-texteditor-input {
+    background-color: lightgreen;
+}
+
+.dx-datagrid-content .dx-datagrid-table .dx-row .dx-editor-cell .dx-texteditor, .dx-datagrid-content .dx-datagrid-table .dx-row .dx-editor-cell .dx-texteditor-container {
+    background-color: green;
+}
