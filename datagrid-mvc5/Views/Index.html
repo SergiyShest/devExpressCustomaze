@@ -32,8 +32,8 @@
                 }
             }
         });
-        
-       
+
+
         return;
         var dataSource = DevExpress.data.AspNet.createStore({
             key: "OrderID",
@@ -64,18 +64,20 @@
     }
 
     function ApplayFilterChanges() {
-        var filter;
-
-        if (filterA.length > 0 && filterB.length > 0) {
-            filter = filterA.concat("and").concat(filterB);
-            dataGrid.filter(filter);
+        var filter = ConcatFilterArr(filterA, filterB);
+        filter =ConcatFilterArr(filter, filterC);
+         dataGrid.filter(filter);
+    }
+    function ConcatFilterArr(filterArr1, filterArr2) {
+        if (filterArr1.length > 0 && filterArr2.length > 0) {
+            return filterArr1.concat("and").concat(filterArr2);
         }
         else {
-            if (filterA.length > 0) {
-                dataGrid.filter(filterA);
+            if (filterArr1.length > 0) {
+                return filterArr1
             }
             else {
-                dataGrid.filter(filterB);
+                return filterArr2
             }
         }
     }
@@ -89,12 +91,18 @@
     }
     function find() {
 
-        var inp = document.getElementById("inpIdFilter").value;
-
-        
-        dataGrid.refresh();
+        var inpVal = document.getElementById("inpIdFilter").value;
+        var arr = inpVal.split(',');
+        for (f = 0, i = 0; i < arr.length; i++ , f++) {
+            filterC[f] = ["OrderID", "=", arr[i]];
+            if (arr.length-1 > i ) {
+                f++;
+                filterC[f] = 'or'
+            }
+        }
+        ApplayFilterChanges();
     }
-       
+
 
 </script>
 <body onload="init()">
