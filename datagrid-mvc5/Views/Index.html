@@ -23,7 +23,7 @@
             value: statuses[0],
             onValueChanged: function (data) {
                 if (data.value == "All") {
-                    filterB.clear();
+                    filterB.length = 0;
                     ApplayFilterChanges();
                 }
                 else {
@@ -66,11 +66,16 @@
     function ApplayFilterChanges() {
         var filter = ConcatFilterArr(filterA, filterB);
         filter =ConcatFilterArr(filter, filterC);
-         dataGrid.filter(filter);
+        dataGrid.filter(filter);
+        dataGrid.refresh();
     }
     function ConcatFilterArr(filterArr1, filterArr2) {
         if (filterArr1.length > 0 && filterArr2.length > 0) {
-            return filterArr1.concat("and").concat(filterArr2);
+            var res = new Array();
+            res[0] = filterArr1;
+            res[1] = "and";
+            res[2] = filterArr2;
+            return res;
         }
         else {
             if (filterArr1.length > 0) {
@@ -84,20 +89,24 @@
 
 
     function FilterClear() {
-
-        filterA.clear()
+        filterA.length = 0;
+        filterB.length = 0;
+        filterC.length = 0;
         dataGrid.clearFilter();
 
     }
     function find() {
-
+        filterC.length = 0;
         var inpVal = document.getElementById("inpIdFilter").value;
+        inpVal = inpVal.replace(/\s/g, '').replace(/,+/g, ',');
         var arr = inpVal.split(',');
-        for (f = 0, i = 0; i < arr.length; i++ , f++) {
-            filterC[f] = ["OrderID", "=", arr[i]];
-            if (arr.length-1 > i ) {
-                f++;
-                filterC[f] = 'or'
+        if (arr.length == 1 && arr[0] == '') { }else {
+            for (f = 0, i = 0; i < arr.length; i++ , f++) {
+                filterC[f] = ["OrderID", "=", arr[i]];
+                if (arr.length - 1 > i) {
+                    f++;
+                    filterC[f] = 'or'
+                }
             }
         }
         ApplayFilterChanges();
