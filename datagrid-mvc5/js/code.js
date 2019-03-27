@@ -1,4 +1,13 @@
-﻿var statuses = ["All", 'Switzerland', 'Belgium', 'Brazil', 'France', 'Brazil', 'Germany',];
+﻿function copyToClipboard (str ) {
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+};
+
+var statuses = ["All", 'Switzerland', 'Belgium', 'Brazil', 'France', 'Brazil', 'Germany',];
 //добавление пункта меню копировать
 function contextMenuPreparing(e) {
     if (e.target == 'header') {
@@ -11,7 +20,7 @@ function contextMenuPreparing(e) {
                 onItemClick: function () {
                     var res = '';
                     for (i = 0; i < selectedRows.length; i++) { res += selectedRows[i][ind] + ',' }
-                    alert(res);
+                    copyToClipboard(res.trim(','));
                 }
             });
         }

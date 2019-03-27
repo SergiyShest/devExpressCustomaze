@@ -3,6 +3,7 @@ using DevExtreme.AspNet.Data;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -13,7 +14,11 @@ namespace datagrid_mvc5.Controllers {
 
         [HttpGet]
         public ActionResult Get(DataSourceLoadOptions loadOptions) {
+            var x = new xe();
+            x.Test();
+
             loadOptions.PrimaryKey = new[] { "OrderID" };
+            var dt = DateTime.Now; 
             System.Diagnostics.Debug.WriteLine(_db.Orders.Count());
             var ordersQuery = from o in _db.Orders
                               select new {
@@ -37,6 +42,8 @@ namespace datagrid_mvc5.Controllers {
                               };
 
             var loadResult = DataSourceLoader.Load(ordersQuery, loadOptions);
+            var time = DateTime.Now - dt;
+            Debug.WriteLine("time= s={0}:{1} ",time.Seconds,time.Milliseconds);
             return Content(JsonConvert.SerializeObject(loadResult), "application/json");
         }
 

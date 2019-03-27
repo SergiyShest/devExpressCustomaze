@@ -196,7 +196,7 @@
   margin-bottom: 20px;
 }
 .dx-datagrid .dx-row-alt {
-    background-color: #d9b8b8;
+    background-color: #d9d8d8;
 }
 .dx-rtl .dx-datagrid .dx-datagrid-rowsview .dx-data-row td.dx-pointer-events-none,
 .dx-rtl .dx-datagrid .dx-datagrid-rowsview .dx-freespace-row td.dx-pointer-events-none,
@@ -1342,7 +1342,11 @@
 }
 @font-face {
   font-family: 'DXIcons';
-  src: local("DevExtreme Generic Icons"), local("devextreme_generic_icons"), url(icons/dxicons.woff2) format('woff2'), url(icons/dxicons.woff) format('woff'), url(icons/dxicons.ttf) format('truetype');
+  src: local("DevExtreme Generic Icons"),
+      local("devextreme_generic_icons"), 
+      url(icons/dxicons.woff2) format('woff2'),
+      url(icons/dxicons.woff) format('woff'),
+      url(icons/dxicons.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
