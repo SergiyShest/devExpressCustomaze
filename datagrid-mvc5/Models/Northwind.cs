@@ -27,9 +27,8 @@ namespace datagrid_mvc5.Models
                 .IsFixedLength();
 
             modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Employees1)
-                .WithOptional(e => e.Employee1)
-                .HasForeignKey(e => e.ReportsTo);
+                .Property(e => e.EmployeeID);
+              //
 
             modelBuilder.Entity<Order_Detail>()
                 .Property(e => e.UnitPrice)

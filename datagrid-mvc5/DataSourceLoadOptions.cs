@@ -5,7 +5,15 @@ using System;
 namespace DevExtreme.AspNet.Data {
 
     [ModelBinder(typeof(DataSourceLoadOptionsBinder))]
-    public class DataSourceLoadOptions : DataSourceLoadOptionsBase { }
+    public class DataSourceLoadOptions : DataSourceLoadOptionsBase {
+
+
+        public override string ToString()
+        {
+            return string.Format("Filter={0},Take={1},RequireTotalCount={2}", base.Filter,base.Take,base.RequireTotalCount);
+        }
+
+    }
 
     class DataSourceLoadOptionsBinder : IModelBinder {
 
@@ -16,5 +24,7 @@ namespace DevExtreme.AspNet.Data {
         }
     }
 
+
+   
 }
 

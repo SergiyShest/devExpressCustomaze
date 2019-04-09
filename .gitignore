@@ -1,0 +1,6 @@
+/.vs
+/datagrid-mvc5/App_Data/*.ldf
+/datagrid-mvc5/bin
+/datagrid-mvc5/obj/Debug
+/UpgradeLog.htm
+/datagrid-mvc5/obj

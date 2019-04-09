@@ -1,6 +1,7 @@
 ﻿using datagrid_mvc5.Models;
 using DevExtreme.AspNet.Data;
 using Newtonsoft.Json;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,15 +11,17 @@ using System.Web.Mvc;
 namespace datagrid_mvc5.Controllers {
 
     public class OrdersController : Controller {
-        Northwind _db = new Northwind();
 
+
+        Northwind _db = new Northwind();
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         [HttpGet]
         public ActionResult Get(DataSourceLoadOptions loadOptions) {
-            var x = new xe();
-            x.Test();
+            var dt = DateTime.Now;
+            logger.Info("=>"+loadOptions);
+ 
 
-            loadOptions.PrimaryKey = new[] { "OrderID" };
-            var dt = DateTime.Now; 
+ loadOptions.PrimaryKey = new[] { "OrderID" };
             System.Diagnostics.Debug.WriteLine(_db.Orders.Count());
             var ordersQuery = from o in _db.Orders
                               select new {
@@ -42,9 +45,12 @@ namespace datagrid_mvc5.Controllers {
                               };
 
             var loadResult = DataSourceLoader.Load(ordersQuery, loadOptions);
+            var ret=Content(JsonConvert.SerializeObject(loadResult), "application/json");
             var time = DateTime.Now - dt;
-            Debug.WriteLine("time= s={0}:{1} ",time.Seconds,time.Milliseconds);
-            return Content(JsonConvert.SerializeObject(loadResult), "application/json");
+            var mess = string.Format("time= s={0}:{1} ", time.Seconds, time.Milliseconds);
+            Trace.WriteLine(mess);
+            logger.Info("=>" + mess);
+            return ret;
         }
 
         [HttpGet]

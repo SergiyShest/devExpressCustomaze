@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\grid</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include=".bowerrc">
+      <publishTime>03/08/2019 05:46:28</publishTime>
+    </File>
+    <File Include="bin/datagrid-mvc5.dll">
+      <publishTime>04/06/2019 10:37:21</publishTime>
+    </File>
+    <File Include="bin/datagrid-mvc5.pdb">
+      <publishTime>04/06/2019 10:37:21</publishTime>
+    </File>
+    <File Include="bin/DevExtreme.AspNet.Data.dll">
+      <publishTime>03/10/2019 07:20:44</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/10/2019 07:20:49</publishTime>
+    </File>
+    <File Include="bin/NLog.config">
+      <publishTime>04/06/2019 03:47:02</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>04/02/2019 22:28:48</publishTime>
+    </File>
+    <File Include="bin/NLog.Web.dll">
+      <publishTime>03/18/2019 21:03:58</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>08/24/2018 15:44:36</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.EntityFramework.dll">
+      <publishTime>08/24/2018 15:44:38</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>03/10/2019 07:20:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/10/2019 07:20:47</publishTime>
+    </File>
+    <File Include="bower.json">
+      <publishTime>03/08/2019 05:46:28</publishTime>
+    </File>
+    <File Include="Content/dx.carmine.css">
+      <publishTime>03/08/2019 10:54:01</publishTime>
+    </File>
+    <File Include="Content/dx.common.css">
+      <publishTime>03/08/2019 10:54:04</publishTime>
+    </File>
+    <File Include="Content/dx.ios7.default.css">
+      <publishTime>03/08/2019 10:54:05</publishTime>
+    </File>
+    <File Include="Content/dx.light.compact.css">
+      <publishTime>03/08/2019 10:54:06</publishTime>
+    </File>
+    <File Include="Content/dx.light.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.material.blue.dark.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.material.blue.light.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.material.lime.light.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.material.orange.light.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.material.purple.light.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.material.teal.light.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/dx.softblue.css">
+      <publishTime>03/10/2019 08:05:15</publishTime>
+    </File>
+    <File Include="Content/dx.spa.css">
+      <publishTime>03/08/2019 10:54:12</publishTime>
+    </File>
+    <File Include="Content/grey.css">
+      <publishTime>03/11/2019 05:19:24</publishTime>
+    </File>
+    <File Include="Content/icons/dxicons.ttf">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxicons.woff">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxicons.woff2">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxiconsios.ttf">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxiconsios.woff">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxiconsios.woff2">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxiconsmaterial.ttf">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxiconsmaterial.woff">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Content/icons/dxiconsmaterial.woff2">
+      <publishTime>03/08/2019 10:55:26</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/08/2019 05:46:28</publishTime>
+    </File>
+    <File Include="js/code.js">
+      <publishTime>03/11/2019 04:20:53</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>03/30/2019 12:43:37</publishTime>
+    </File>
+    <File Include="NLog.config">
+      <publishTime>04/06/2019 03:47:02</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/06/2019 03:48:56</publishTime>
+    </File>
+    <File Include="Scripts/dx.all.js">
+      <publishTime>03/08/2019 07:33:26</publishTime>
+    </File>
+    <File Include="Scripts/dx.aspnet.data.js">
+      <publishTime>03/08/2019 07:44:44</publishTime>
+    </File>
+    <File Include="Scripts/dx.aspnet.mvc.js">
+      <publishTime>03/08/2019 07:44:44</publishTime>
+    </File>
+    <File Include="Scripts/iqery.min.js">
+      <publishTime>03/08/2019 07:53:07</publishTime>
+    </File>
+    <File Include="Views/Index.html">
+      <publishTime>03/10/2019 08:11:35</publishTime>
+    </File>
+    <File Include="Views/Index2.html">
+      <publishTime>03/10/2019 07:20:27</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/06/2019 10:37:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -69,11 +69,12 @@ namespace datagrid_mvc5.Models {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees1 { get; set; }
 
-        [JsonIgnore]
-        public virtual Employee Employee1 { get; set; }
+ 
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }
+
+ public partial class Employee1 : Employee { }
 }
