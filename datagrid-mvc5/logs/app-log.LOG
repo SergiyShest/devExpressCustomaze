@@ -1,1 +1,6 @@
-2019-04-09 04:58:37.9090|INFO|datagrid_mvc5.Controllers.Orders1Controller|=>Orders1-- time= s=0:45 
+2019-04-10 04:11:46.7090|INFO|datagrid_mvc5.Controllers.OrdersController|=>Filter=,Take=30,RequireTotalCount=True
+2019-04-10 04:12:20.8810|INFO|datagrid_mvc5.Controllers.OrdersController|=>time= s=34:174 
+2019-04-10 04:12:22.0810|INFO|datagrid_mvc5.Controllers.OrdersController|=>Filter=System.Collections.Generic.List`1[System.Object],Take=1,RequireTotalCount=False
+2019-04-10 04:12:22.1510|INFO|datagrid_mvc5.Controllers.OrdersController|=>time= s=0:69 
+2019-04-10 04:15:50.9620|INFO|datagrid_mvc5.Controllers.OrdersController|=>Filter=,Take=30,RequireTotalCount=False
+2019-04-10 04:15:51.0400|INFO|datagrid_mvc5.Controllers.OrdersController|=>time= s=4:148 
