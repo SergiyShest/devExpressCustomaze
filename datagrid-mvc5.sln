@@ -7,16 +7,42 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datagrid-mvc5", "datagrid-m
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{01B6E6C4-A22C-4FFA-93CC-E343044B8405}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datagrid-mvc5Tests", "datagrid-mvc5Tests\datagrid-mvc5Tests.csproj", "{C6734857-8559-463F-B61A-12948209DCA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Debug|x64.Build.0 = Debug|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Debug|x86.Build.0 = Debug|Any CPU
 		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Release|x64.ActiveCfg = Release|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Release|x64.Build.0 = Release|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC571F0F-9F4E-4046-8073-C6AEFE46641D}.Release|x86.Build.0 = Release|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Debug|x64.ActiveCfg = Debug|x64
+		{C6734857-8559-463F-B61A-12948209DCA4}.Debug|x64.Build.0 = Debug|x64
+		{C6734857-8559-463F-B61A-12948209DCA4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Debug|x86.Build.0 = Debug|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Release|x64.ActiveCfg = Release|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Release|x64.Build.0 = Release|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Release|x86.ActiveCfg = Release|Any CPU
+		{C6734857-8559-463F-B61A-12948209DCA4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,13 @@ using System.Web.Mvc;
 namespace datagrid_mvc5.Controllers {
 
     public class OrdersController : Controller {
+
+ [HttpGet]
+        public ActionResult Index() {
+          return  View();
+        }
+
+
         Northwind _db = new Northwind();
 
         [HttpGet]

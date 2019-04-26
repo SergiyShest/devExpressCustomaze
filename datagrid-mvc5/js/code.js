@@ -1,4 +1,13 @@
-﻿var statuses = ["All", 'Switzerland', 'Belgium', 'Brazil', 'France', 'Brazil', 'Germany',];
+﻿function copyToClipboard (str ) {
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+};
+
+var statuses = ["All", 'Switzerland', 'Belgium', 'Brazil', 'France', 'Brazil', 'Germany',];
 //добавление пункта меню копировать
 function contextMenuPreparing(e) {
     if (e.target == 'header') {
@@ -11,15 +20,16 @@ function contextMenuPreparing(e) {
                 onItemClick: function () {
                     var res = '';
                     for (i = 0; i < selectedRows.length; i++) { res += selectedRows[i][ind] + ',' }
-                    alert(res);
+                    copyToClipboard(res.trim(','));
                 }
             });
         }
     }
 }
+
 $(function () {
 
-
+//получение строки фильтров
 function processFilter(dataGridInstance, filter) {
     if ($.isArray(filter)) {
         if ($.isFunction(filter[0])) {
@@ -34,7 +44,7 @@ function processFilter(dataGridInstance, filter) {
 }
 
 $("#buttonContainer").dxButton({
-    text: "Get Filtered",
+    text: "проверка фильтра",
     onClick: function (e) {
         var grid = $("#grid").dxDataGrid("instance"),
         filter = grid.getCombinedFilter();
@@ -42,7 +52,7 @@ $("#buttonContainer").dxButton({
         alert(filter);
     }
 }).dxButton("instance");
-
+//поиск имени конолки по фильтру
 function getColumnFieldName(dataGridInstance, getter) {
     var column,
         i;
@@ -100,11 +110,10 @@ function getColumnFieldName(dataGridInstance, getter) {
         columns: [
             {
                 dataField: "OrderID",
-                text: 'od',
                 formItem: {
                     visible: true
                 },
-                headerCellTemplate: $('<i style="color: black">ЖОППА</i>')
+                headerCellTemplate: $('<i style="color: black">ID</i>')
             },
             {
                 caption: "Customer",
@@ -138,7 +147,7 @@ function getColumnFieldName(dataGridInstance, getter) {
                     }
                 }
             },
-            { dataField: "OrderDate", dataType: "date" },
+            { caption: "дата ",dataField: "OrderDate", dataType: "date" },
             { dataField: "RequiredDate", dataType: "date" },
             { dataField: "ShippedDate", dataType: "date" },
             {
