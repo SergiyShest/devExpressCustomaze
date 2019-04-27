@@ -3,13 +3,18 @@ namespace datagrid_mvc5.Models {
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using System.Diagnostics;
 
     public partial class Northwind : DbContext {
-        public Northwind()
-            : base("name=Northwind") {
+        public Northwind(): base("name=Northwind") {
             Configuration.ProxyCreationEnabled = false;
+            base.Database.Log = WriteToLog;
         }
 
+        void WriteToLog(string message)
+        {
+            Debug.WriteLine(message);
+        }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }

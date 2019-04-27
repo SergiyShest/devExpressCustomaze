@@ -1,19 +1,31 @@
 define( [
 	"../core",
 	"../core/toType",
+<<<<<<< HEAD
+=======
+	"../core/isAttached",
+>>>>>>> master
 	"./var/rtagName",
 	"./var/rscriptType",
 	"./wrapMap",
 	"./getAll",
 	"./setGlobalEval"
+<<<<<<< HEAD
 ], function( jQuery, toType, rtagName, rscriptType, wrapMap, getAll, setGlobalEval ) {
+=======
+], function( jQuery, toType, isAttached, rtagName, rscriptType, wrapMap, getAll, setGlobalEval ) {
+>>>>>>> master
 
 "use strict";
 
 var rhtml = /<|&#?\w+;/;
 
 function buildFragment( elems, context, scripts, selection, ignored ) {
+<<<<<<< HEAD
 	var elem, tmp, tag, wrap, contains, j,
+=======
+	var elem, tmp, tag, wrap, attached, j,
+>>>>>>> master
 		fragment = context.createDocumentFragment(),
 		nodes = [],
 		i = 0,
@@ -77,13 +89,21 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 			continue;
 		}
 
+<<<<<<< HEAD
 		contains = jQuery.contains( elem.ownerDocument, elem );
+=======
+		attached = isAttached( elem );
+>>>>>>> master
 
 		// Append to fragment
 		tmp = getAll( fragment.appendChild( elem ), "script" );
 
 		// Preserve script evaluation history
+<<<<<<< HEAD
 		if ( contains ) {
+=======
+		if ( attached ) {
+>>>>>>> master
 			setGlobalEval( tmp );
 		}
 

@@ -1,7 +1,12 @@
 /*!
 * DevExtreme (dx.messages.nl.js)
+<<<<<<< HEAD
 * Version: 18.2.6
 * Build date: Tue Feb 05 2019
+=======
+* Version: 18.2.8
+* Build date: Tue Apr 23 2019
+>>>>>>> master
 *
 * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -261,6 +266,7 @@
             "dxFilterBuilder-filterOperationBetween": "Is tussen",
             "dxFilterBuilder-filterOperationAnyOf": "Is een van",
             "dxFilterBuilder-filterOperationNoneOf": "Is geen van",
+<<<<<<< HEAD
             "dxHtmlEditor-dialogColorCaption": "!TODO!",
             "dxHtmlEditor-dialogBackgroundCaption": "!TODO!",
             "dxHtmlEditor-dialogLinkCaption": "!TODO!",
@@ -274,6 +280,21 @@
             "dxHtmlEditor-dialogImageHeightField": "!TODO!",
             "dxHtmlEditor-heading": "!TODO!",
             "dxHtmlEditor-normalText": "!TODO!"
+=======
+            "dxHtmlEditor-dialogColorCaption": "Tekstkleur",
+            "dxHtmlEditor-dialogBackgroundCaption": "Achtergrondkleur",
+            "dxHtmlEditor-dialogLinkCaption": "Link",
+            "dxHtmlEditor-dialogLinkUrlField": "URL",
+            "dxHtmlEditor-dialogLinkTextField": "Tekst",
+            "dxHtmlEditor-dialogLinkTargetField": "Open link in een nieuw venster",
+            "dxHtmlEditor-dialogImageCaption": "Afbeelding",
+            "dxHtmlEditor-dialogImageUrlField": "URL",
+            "dxHtmlEditor-dialogImageAltField": "Alternatieve tekst",
+            "dxHtmlEditor-dialogImageWidthField": "Breedte (px)",
+            "dxHtmlEditor-dialogImageHeightField": "Hoogte (px)",
+            "dxHtmlEditor-heading": "Titel",
+            "dxHtmlEditor-normalText": "Normale tekst"
+>>>>>>> master
         }
     })
 });

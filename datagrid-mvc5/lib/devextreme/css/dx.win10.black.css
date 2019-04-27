@@ -1,7 +1,12 @@
 /*!
 * DevExtreme
+<<<<<<< HEAD
 * Version: 18.2.6
 * Build date: Feb 5, 2019
+=======
+* Version: 18.2.8
+* Build date: Apr 23, 2019
+>>>>>>> master
 *
 * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -109,11 +114,15 @@
 }
 .dx-datagrid .dx-datagrid-rowsview .dx-virtual-row > td:not(.dx-datagrid-group-space):before {
   display: block;
+<<<<<<< HEAD
   position: absolute;
   left: 7px;
   right: 7px;
   top: 0;
   bottom: 0;
+=======
+  height: 100%;
+>>>>>>> master
   content: '';
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAACqCAYAAABbAOqQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjYWQ2ODE5MS00ZDMxLWRjNGYtOTU0NC1jNjJkMTIxMjY2M2IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkZBMzM1MzUzRDYzMTFFOEIwNEVFMkJENjkwODU5NTIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkZBMzM1MzQzRDYzMTFFOEIwNEVFMkJENjkwODU5NTIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVlMjM1Y2U0LTc5ZWUtNGI0NC05ZjlkLTk2NTZmZGFjNjhhNCIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjk1OTQ2MjBiLTUyMTQtYTM0Yy04Nzc5LTEwMmEyMTY4MTlhOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi/HBW0AAAE4SURBVHja7N2xDYQwEEVBjOiB/svbKtaEBBsQIGTsedI1wOgTsbqWmZvGafcIgAgIEAEBIiBABGTtjut3egyvFhbilSUgQAREQIAICBABASIgQPR5zXdZFiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAqKykS+owkIERECACAgQAQEiIEAERECA6GEuqCxEQIAICBABASIgQAREQIAICBABASIgQAREdav+B1VYiIAAERAgAgJEQAQEiIAAEZCpckFlIQICRECACAgQAQEiIAICRECACAgQAQEiIKpb9YLKQgQEiIAAERAgAiIgQAQEiIDMlQsqCxEQIAICRECACAgQAREQIAICRECACAgQAVHdXy+owkIEBIiACAgQAQEiIEAEBIiA6JYLKgsRECACAkRAgAgIEI1UF2AAmMEXXlD4taoAAAAASUVORK5CYII=);
   background-repeat: no-repeat repeat;
@@ -200,6 +209,10 @@
 .dx-rtl .dx-datagrid .dx-datagrid-rowsview .dx-freespace-row td.dx-pointer-events-none,
 .dx-rtl .dx-datagrid .dx-datagrid-headers .dx-row td.dx-pointer-events-none {
   border-left: 2px solid #999999;
+<<<<<<< HEAD
+=======
+  border-right: 2px solid #999999;
+>>>>>>> master
 }
 .dx-rtl .dx-datagrid .dx-datagrid-rowsview .dx-data-row td.dx-pointer-events-none.dx-first-cell,
 .dx-rtl .dx-datagrid .dx-datagrid-rowsview .dx-freespace-row td.dx-pointer-events-none.dx-first-cell,
@@ -866,6 +879,10 @@
   border-top-width: 0;
   border-left: 1px solid #999999;
   border-right: 1px solid #999999;
+<<<<<<< HEAD
+=======
+  border-bottom: 1px solid #999999;
+>>>>>>> master
 }
 .dx-treelist .dx-column-lines > td:first-child {
   border-left: none;
@@ -937,11 +954,15 @@
 }
 .dx-treelist-container .dx-treelist-rowsview .dx-virtual-row > td:before {
   display: block;
+<<<<<<< HEAD
   position: absolute;
   left: 7px;
   right: 7px;
   top: 0;
   bottom: 0;
+=======
+  height: 100%;
+>>>>>>> master
   content: '';
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAACqCAYAAABbAOqQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjYWQ2ODE5MS00ZDMxLWRjNGYtOTU0NC1jNjJkMTIxMjY2M2IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkZBMzM1MzUzRDYzMTFFOEIwNEVFMkJENjkwODU5NTIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkZBMzM1MzQzRDYzMTFFOEIwNEVFMkJENjkwODU5NTIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVlMjM1Y2U0LTc5ZWUtNGI0NC05ZjlkLTk2NTZmZGFjNjhhNCIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjk1OTQ2MjBiLTUyMTQtYTM0Yy04Nzc5LTEwMmEyMTY4MTlhOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi/HBW0AAAE4SURBVHja7N2xDYQwEEVBjOiB/svbKtaEBBsQIGTsedI1wOgTsbqWmZvGafcIgAgIEAEBIiBABGTtjut3egyvFhbilSUgQAREQIAICBABASIgQPR5zXdZFiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAqKykS+owkIERECACAgQAQEiIEAERECA6GEuqCxEQIAICBABASIgQAREQIAICBABASIgQAREdav+B1VYiIAAERAgAgJEQAQEiIAAEZCpckFlIQICRECACAgQAQEiIAICRECACAgQAQEiIKpb9YLKQgQEiIAAERAgAiIgQAQEiIDMlQsqCxEQIAICRECACAgQAREQIAICRECACAgQAVHdXy+owkIEBIiACAgQAQEiIEAEBIiA6JYLKgsRECACAkRAgAgIEI1UF2AAmMEXXlD4taoAAAAASUVORK5CYII=);
   background-repeat: no-repeat repeat;
@@ -1030,6 +1051,10 @@
 .dx-rtl .dx-treelist-container .dx-treelist-rowsview .dx-freespace-row td.dx-pointer-events-none,
 .dx-rtl .dx-treelist-container .dx-treelist-headers .dx-row td.dx-pointer-events-none {
   border-left: 2px solid #999999;
+<<<<<<< HEAD
+=======
+  border-right: 2px solid #999999;
+>>>>>>> master
 }
 .dx-rtl .dx-treelist-container .dx-treelist-rowsview .dx-data-row td.dx-pointer-events-none.dx-first-cell,
 .dx-rtl .dx-treelist-container .dx-treelist-rowsview .dx-freespace-row td.dx-pointer-events-none.dx-first-cell,
@@ -4153,6 +4178,7 @@
 .dx-lookup-popup-wrapper .dx-popup-bottom {
   background-color: #2b2b2b;
 }
+<<<<<<< HEAD
 .dx-lookup-validation-message {
   height: 20px;
   color: #e81123;
@@ -4160,6 +4186,8 @@
 .dx-lookup-popup-search .dx-lookup-invalid .dx-list {
   top: 76px;
 }
+=======
+>>>>>>> master
 .dx-actionsheet-popup-wrapper .dx-popup-content,
 .dx-actionsheet-popover-wrapper .dx-popup-content {
   padding: 0;
@@ -7578,8 +7606,13 @@
 .dx-scheduler-timeline .dx-scheduler-all-day-title {
   display: none;
 }
+<<<<<<< HEAD
 .dx-scheduler-work-space-month .dx-scheduler-appointment-reduced .dx-scheduler-appointment-recurrence-icon,
 .dx-scheduler-timeline .dx-scheduler-appointment-reduced .dx-scheduler-appointment-recurrence-icon {
+=======
+.dx-scheduler-work-space-month .dx-scheduler-appointment-reduced.dx-scheduler-appointment-head .dx-scheduler-appointment-recurrence-icon,
+.dx-scheduler-timeline .dx-scheduler-appointment-reduced.dx-scheduler-appointment-head .dx-scheduler-appointment-recurrence-icon {
+>>>>>>> master
   right: 20px;
 }
 .dx-scheduler-timeline .dx-scheduler-fixed-appointments {
@@ -8573,7 +8606,11 @@
 .dx-scheduler-work-space-week .dx-scheduler-appointment-reduced .dx-scheduler-appointment-content,
 .dx-scheduler-work-space-work-week .dx-scheduler-appointment-reduced .dx-scheduler-appointment-content,
 .dx-scheduler-work-space-day .dx-scheduler-appointment-reduced .dx-scheduler-appointment-content {
+<<<<<<< HEAD
   padding: 5px 40px 5px 7px;
+=======
+  padding-right: 40px;
+>>>>>>> master
 }
 .dx-scheduler-work-space-week .dx-scheduler-appointment-reduced-icon,
 .dx-scheduler-work-space-work-week .dx-scheduler-appointment-reduced-icon,
@@ -8662,7 +8699,11 @@
 }
 .dx-scheduler-all-day-appointment .dx-scheduler-appointment-reduced-icon {
   position: absolute;
+<<<<<<< HEAD
   top: 35%;
+=======
+  top: 15%;
+>>>>>>> master
 }
 .dx-scheduler-appointment.dx-scheduler-appointment-body,
 .dx-scheduler-appointment.dx-scheduler-appointment-tail {
@@ -8678,7 +8719,11 @@
   position: absolute;
   background-repeat: no-repeat;
   top: 3px;
+<<<<<<< HEAD
   right: 7px;
+=======
+  right: 5px;
+>>>>>>> master
   display: none;
 }
 .dx-scheduler-appointment-recurrence-icon.dx-icon-repeat {
@@ -9735,10 +9780,17 @@
   text-align: right;
 }
 .dx-rtl .dx-scheduler-appointment-recurrence-icon {
+<<<<<<< HEAD
   left: 7px;
   right: auto;
 }
 .dx-rtl .dx-scheduler-appointment-reduced .dx-scheduler-appointment-recurrence-icon {
+=======
+  left: 20px;
+  right: auto;
+}
+.dx-rtl .dx-scheduler-appointment-reduced.dx-scheduler-appointment-head .dx-scheduler-appointment-recurrence-icon {
+>>>>>>> master
   left: 20px;
   right: auto;
 }

@@ -145,6 +145,7 @@ jQuery.each( {
 		return siblings( elem.firstChild );
 	},
 	contents: function( elem ) {
+<<<<<<< HEAD
         if ( nodeName( elem, "iframe" ) ) {
             return elem.contentDocument;
         }
@@ -157,6 +158,20 @@ jQuery.each( {
         }
 
         return jQuery.merge( [], elem.childNodes );
+=======
+		if ( typeof elem.contentDocument !== "undefined" ) {
+			return elem.contentDocument;
+		}
+
+		// Support: IE 9 - 11 only, iOS 7 only, Android Browser <=4.3 only
+		// Treat the template element as a regular one in browsers that
+		// don't support it.
+		if ( nodeName( elem, "template" ) ) {
+			elem = elem.content || elem;
+		}
+
+		return jQuery.merge( [], elem.childNodes );
+>>>>>>> master
 	}
 }, function( name, fn ) {
 	jQuery.fn[ name ] = function( until, selector ) {

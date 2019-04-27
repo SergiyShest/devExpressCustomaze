@@ -1,7 +1,11 @@
 define( [
 	"./core",
 	"./core/toType",
+<<<<<<< HEAD
 	"./manipulation/var/rcheckableType",
+=======
+	"./var/rcheckableType",
+>>>>>>> master
 	"./var/isFunction",
 	"./core/init",
 	"./traversing", // filter
@@ -70,6 +74,13 @@ jQuery.param = function( a, traditional ) {
 				encodeURIComponent( value == null ? "" : value );
 		};
 
+<<<<<<< HEAD
+=======
+	if ( a == null ) {
+		return "";
+	}
+
+>>>>>>> master
 	// If an array was passed in, assume that it is an array of form elements.
 	if ( Array.isArray( a ) || ( a.jquery && !jQuery.isPlainObject( a ) ) ) {
 

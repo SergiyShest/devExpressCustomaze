@@ -1,7 +1,12 @@
 /*!
 * DevExtreme
+<<<<<<< HEAD
 * Version: 18.2.6
 * Build date: Feb 5, 2019
+=======
+* Version: 18.2.8
+* Build date: Apr 23, 2019
+>>>>>>> master
 *
 * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -1345,6 +1350,12 @@
   table-layout: fixed;
   position: relative;
 }
+<<<<<<< HEAD
+=======
+.dx-tabs.dx-tabs-stretched {
+  table-layout: auto;
+}
+>>>>>>> master
 .dx-tabs.dx-overflow-hidden {
   overflow: hidden;
 }
@@ -2061,6 +2072,14 @@
 .dx-datebox {
   max-width: 100%;
 }
+<<<<<<< HEAD
+=======
+.dx-datebox .dx-texteditor-input::-webkit-datetime-edit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+>>>>>>> master
 .dx-datebox.dx-texteditor-empty input::-webkit-datetime-edit {
   color: transparent;
 }
@@ -2415,6 +2434,34 @@
   max-height: inherit;
   min-height: inherit;
 }
+<<<<<<< HEAD
+=======
+.dx-popup-content > .dx-widget {
+  max-height: inherit;
+}
+.dx-popup-content > .dx-template-wrapper {
+  max-height: inherit;
+  min-height: inherit;
+}
+.dx-popup-content > .dx-template-wrapper > .dx-treeview,
+.dx-popup-content > .dx-template-wrapper > .dx-scrollable,
+.dx-popup-content > .dx-template-wrapper > .dx-treeview > .dx-scrollable {
+  max-height: inherit;
+  min-height: inherit;
+}
+.dx-popup-content > .dx-template-wrapper > .dx-treeview > .dx-scrollable-wrapper,
+.dx-popup-content > .dx-template-wrapper > .dx-scrollable > .dx-scrollable-wrapper,
+.dx-popup-content > .dx-template-wrapper > .dx-treeview > .dx-scrollable > .dx-scrollable-wrapper,
+.dx-popup-content > .dx-template-wrapper > .dx-treeview > .dx-scrollable-wrapper > .dx-scrollable-container,
+.dx-popup-content > .dx-template-wrapper > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container,
+.dx-popup-content > .dx-template-wrapper > .dx-treeview > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container {
+  max-height: inherit;
+  min-height: inherit;
+}
+.dx-popup-content > .dx-template-wrapper > .dx-widget {
+  max-height: inherit;
+}
+>>>>>>> master
 .dx-dialog-root .dx-overlay-shader {
   background-color: #444;
 }
@@ -2900,12 +2947,15 @@
 .dx-lookup-search-wrapper {
   width: 100%;
 }
+<<<<<<< HEAD
 .dx-popup-content .dx-lookup-validation-message {
   display: none;
 }
 .dx-popup-content.dx-lookup-invalid .dx-lookup-validation-message {
   display: block;
 }
+=======
+>>>>>>> master
 .dx-actionsheet-popup-wrapper .dx-overlay-content {
   padding-top: 0;
   padding-bottom: 0;
@@ -4038,6 +4088,12 @@ input.dx-hidden {
 .dx-datagrid-content .dx-datagrid-table:not(.dx-datagrid-table-fixed) .dx-text-content-alignment-right {
   margin-left: 3px;
 }
+<<<<<<< HEAD
+=======
+.dx-datagrid-content .dx-datagrid-table:not(.dx-datagrid-table-fixed) .dx-master-detail-cell {
+  max-width: 0;
+}
+>>>>>>> master
 .dx-datagrid-content .dx-datagrid-table [class*="column"] + [class*="column"]:last-child {
   float: none;
 }
@@ -4108,6 +4164,14 @@ input.dx-hidden {
   width: 30px;
   min-width: 30px;
   max-width: 30px;
+<<<<<<< HEAD
+=======
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+>>>>>>> master
 }
 .dx-datagrid-content .dx-datagrid-table .dx-filter-range-content {
   padding: 7px 7px 7px 32px;
@@ -5196,6 +5260,12 @@ input.dx-hidden {
 .dx-treelist-content .dx-treelist-table:not(.dx-treelist-table-fixed) .dx-text-content-alignment-right {
   margin-left: 3px;
 }
+<<<<<<< HEAD
+=======
+.dx-treelist-content .dx-treelist-table:not(.dx-treelist-table-fixed) .dx-master-detail-cell {
+  max-width: 0;
+}
+>>>>>>> master
 .dx-treelist-content .dx-treelist-table [class*="column"] + [class*="column"]:last-child {
   float: none;
 }
@@ -5266,6 +5336,14 @@ input.dx-hidden {
   width: 30px;
   min-width: 30px;
   max-width: 30px;
+<<<<<<< HEAD
+=======
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+>>>>>>> master
 }
 .dx-treelist-content .dx-treelist-table .dx-filter-range-content {
   padding: 7px 7px 7px 32px;
@@ -6734,7 +6812,11 @@ input.dx-hidden {
 }
 .dx-rtl .dx-field-item-required-mark,
 .dx-rtl .dx-field-item-optional-mark {
+<<<<<<< HEAD
   float: left;
+=======
+  unicode-bidi: embed;
+>>>>>>> master
 }
 .dx-rtl .dx-field-item:not(.dx-first-col) {
   padding-left: 0;
@@ -6929,6 +7011,16 @@ input.dx-hidden {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+<<<<<<< HEAD
+=======
+.dx-drawer-overlap .dx-drawer-panel-content {
+  overflow: visible;
+}
+.dx-drawer-overlap .dx-drawer-panel-content.dx-overlay-wrapper {
+  right: auto;
+  left: auto;
+}
+>>>>>>> master
 .dx-drawer-overlap.dx-drawer-left .dx-drawer-wrapper,
 .dx-drawer-overlap.dx-drawer-right .dx-drawer-wrapper {
   overflow-y: visible;
@@ -6940,11 +7032,14 @@ input.dx-hidden {
 .dx-drawer-overlap.dx-drawer-right.dx-drawer-expand .dx-overlay-content {
   right: 0px;
 }
+<<<<<<< HEAD
 .dx-overlay-wrapper.dx-drawer-panel-content {
   overflow: visible;
   right: auto;
   left: auto;
 }
+=======
+>>>>>>> master
 .dx-card {
   overflow: hidden;
 }
@@ -6958,6 +7053,10 @@ input.dx-hidden {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+=======
+  border: 1px solid transparent;
+>>>>>>> master
 }
 .dx-quill-container {
   -webkit-box-sizing: border-box;

@@ -1,4 +1,5 @@
 /*!
+<<<<<<< HEAD
  * Sizzle CSS Selector Engine v2.3.3
  * https://sizzlejs.com/
  *
@@ -7,6 +8,16 @@
  * http://jquery.org/license
  *
  * Date: 2016-08-08
+=======
+ * Sizzle CSS Selector Engine v2.3.4
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://js.foundation/
+ *
+ * Date: 2019-04-08
+>>>>>>> master
  */
 (function( window ) {
 
@@ -40,6 +51,10 @@ var i,
 	classCache = createCache(),
 	tokenCache = createCache(),
 	compilerCache = createCache(),
+<<<<<<< HEAD
+=======
+	nonnativeSelectorCache = createCache(),
+>>>>>>> master
 	sortOrder = function( a, b ) {
 		if ( a === b ) {
 			hasDuplicate = true;
@@ -101,8 +116,12 @@ var i,
 
 	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
 	rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
+<<<<<<< HEAD
 
 	rattributeQuotes = new RegExp( "=" + whitespace + "*([^\\]'\"]*?)" + whitespace + "*\\]", "g" ),
+=======
+	rdescend = new RegExp( whitespace + "|>" ),
+>>>>>>> master
 
 	rpseudo = new RegExp( pseudos ),
 	ridentifier = new RegExp( "^" + identifier + "$" ),
@@ -123,6 +142,10 @@ var i,
 			whitespace + "*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
 	},
 
+<<<<<<< HEAD
+=======
+	rhtml = /HTML$/i,
+>>>>>>> master
 	rinputs = /^(?:input|select|textarea|button)$/i,
 	rheader = /^h\d$/i,
 
@@ -177,9 +200,15 @@ var i,
 		setDocument();
 	},
 
+<<<<<<< HEAD
 	disabledAncestor = addCombinator(
 		function( elem ) {
 			return elem.disabled === true && ("form" in elem || "label" in elem);
+=======
+	inDisabledFieldset = addCombinator(
+		function( elem ) {
+			return elem.disabled === true && elem.nodeName.toLowerCase() === "fieldset";
+>>>>>>> master
 		},
 		{ dir: "parentNode", next: "legend" }
 	);
@@ -292,6 +321,7 @@ function Sizzle( selector, context, results, seed ) {
 
 			// Take advantage of querySelectorAll
 			if ( support.qsa &&
+<<<<<<< HEAD
 				!compilerCache[ selector + " " ] &&
 				(!rbuggyQSA || !rbuggyQSA.test( selector )) ) {
 
@@ -304,6 +334,24 @@ function Sizzle( selector, context, results, seed ) {
 				// Support: IE <=8
 				// Exclude object elements
 				} else if ( context.nodeName.toLowerCase() !== "object" ) {
+=======
+				!nonnativeSelectorCache[ selector + " " ] &&
+				(!rbuggyQSA || !rbuggyQSA.test( selector )) &&
+
+				// Support: IE 8 only
+				// Exclude object elements
+				(nodeType !== 1 || context.nodeName.toLowerCase() !== "object") ) {
+
+				newSelector = selector;
+				newContext = context;
+
+				// qSA considers elements outside a scoping root when evaluating child or
+				// descendant combinators, which is not what we want.
+				// In such cases, we work around the behavior by prefixing every selector in the
+				// list with an ID selector referencing the scope context.
+				// Thanks to Andrew Dupont for this technique.
+				if ( nodeType === 1 && rdescend.test( selector ) ) {
+>>>>>>> master
 
 					// Capture the context ID, setting it first if necessary
 					if ( (nid = context.getAttribute( "id" )) ) {
@@ -325,6 +373,7 @@ function Sizzle( selector, context, results, seed ) {
 						context;
 				}
 
+<<<<<<< HEAD
 				if ( newSelector ) {
 					try {
 						push.apply( results,
@@ -336,6 +385,18 @@ function Sizzle( selector, context, results, seed ) {
 						if ( nid === expando ) {
 							context.removeAttribute( "id" );
 						}
+=======
+				try {
+					push.apply( results,
+						newContext.querySelectorAll( newSelector )
+					);
+					return results;
+				} catch ( qsaError ) {
+					nonnativeSelectorCache( selector, true );
+				} finally {
+					if ( nid === expando ) {
+						context.removeAttribute( "id" );
+>>>>>>> master
 					}
 				}
 			}
@@ -499,7 +560,11 @@ function createDisabledPseudo( disabled ) {
 					// Where there is no isDisabled, check manually
 					/* jshint -W018 */
 					elem.isDisabled !== !disabled &&
+<<<<<<< HEAD
 						disabledAncestor( elem ) === disabled;
+=======
+						inDisabledFieldset( elem ) === disabled;
+>>>>>>> master
 			}
 
 			return elem.disabled === disabled;
@@ -556,10 +621,20 @@ support = Sizzle.support = {};
  * @returns {Boolean} True iff elem is a non-HTML XML node
  */
 isXML = Sizzle.isXML = function( elem ) {
+<<<<<<< HEAD
 	// documentElement is verified for cases where it doesn't yet exist
 	// (such as loading iframes in IE - #4833)
 	var documentElement = elem && (elem.ownerDocument || elem).documentElement;
 	return documentElement ? documentElement.nodeName !== "HTML" : false;
+=======
+	var namespace = elem.namespaceURI,
+		docElem = (elem.ownerDocument || elem).documentElement;
+
+	// Support: IE <=8
+	// Assume HTML when documentElement doesn't yet exist, such as inside loading iframes
+	// https://bugs.jquery.com/ticket/4833
+	return !rhtml.test( namespace || docElem && docElem.nodeName || "HTML" );
+>>>>>>> master
 };
 
 /**
@@ -981,11 +1056,16 @@ Sizzle.matchesSelector = function( elem, expr ) {
 		setDocument( elem );
 	}
 
+<<<<<<< HEAD
 	// Make sure that attribute selectors are quoted
 	expr = expr.replace( rattributeQuotes, "='$1']" );
 
 	if ( support.matchesSelector && documentIsHTML &&
 		!compilerCache[ expr + " " ] &&
+=======
+	if ( support.matchesSelector && documentIsHTML &&
+		!nonnativeSelectorCache[ expr + " " ] &&
+>>>>>>> master
 		( !rbuggyMatches || !rbuggyMatches.test( expr ) ) &&
 		( !rbuggyQSA     || !rbuggyQSA.test( expr ) ) ) {
 
@@ -999,7 +1079,13 @@ Sizzle.matchesSelector = function( elem, expr ) {
 					elem.document && elem.document.nodeType !== 11 ) {
 				return ret;
 			}
+<<<<<<< HEAD
 		} catch (e) {}
+=======
+		} catch (e) {
+			nonnativeSelectorCache( expr, true );
+		}
+>>>>>>> master
 	}
 
 	return Sizzle( expr, document, null, [ elem ] ).length > 0;
@@ -1458,7 +1544,11 @@ Expr = Sizzle.selectors = {
 		"contains": markFunction(function( text ) {
 			text = text.replace( runescape, funescape );
 			return function( elem ) {
+<<<<<<< HEAD
 				return ( elem.textContent || elem.innerText || getText( elem ) ).indexOf( text ) > -1;
+=======
+				return ( elem.textContent || getText( elem ) ).indexOf( text ) > -1;
+>>>>>>> master
 			};
 		}),
 
@@ -1597,7 +1687,15 @@ Expr = Sizzle.selectors = {
 		}),
 
 		"lt": createPositionalPseudo(function( matchIndexes, length, argument ) {
+<<<<<<< HEAD
 			var i = argument < 0 ? argument + length : argument;
+=======
+			var i = argument < 0 ?
+				argument + length :
+				argument > length ?
+					length :
+					argument;
+>>>>>>> master
 			for ( ; --i >= 0; ) {
 				matchIndexes.push( i );
 			}

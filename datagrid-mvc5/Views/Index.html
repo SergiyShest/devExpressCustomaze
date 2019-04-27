@@ -16,34 +16,13 @@
     var filterA = new Array();
     var filterB = new Array();
     var filterC = new Array();
+    var FilterElementsArray = new Array();
     function init() {
-
         dataGrid = $('#grid').dxDataGrid('instance');
-     //   $("#selectStatus").dxSelectBox({//комбо бокс выбора страны
-     //       dataSource: statuses,
-     //       value: statuses[0],
-     //       onValueChanged: function (data) {
-     //           if (data.value == "All") {
-     //               filterB.length = 0;
-     //               ApplayFilterChanges();
-     //           }
-     //           else {
-     //               filterB[0] = ["ShipCountry", "=", data.value]
-     //               ApplayFilterChanges();
-     //           }
-     //       }
-     //   });
-
         setDataSource();
+        console.time("x");
+
     }
-
-
-    function Filter1() {
-        filterA[0] = [["OrderID", ">", "400"], "and", ["OrderID", '<', "10250"]];
-        ApplayFilterChanges();
-    }
-
-
 
     function FilterStatus(status) {
         var filter = ["ShipCountry", "=", status];
@@ -51,6 +30,8 @@
         dataGrid.refresh();
         console.time("x");
     }
+
+
 
     function CreateFilter() {
         var filtElem = document.getElementById("filter");
@@ -82,6 +63,7 @@
             createTableСell(row, textnode);
             createTableСell(row, checkBox);
             createTableСell(row, input);
+            FilterElementsArray.push({ DataField: column.dataField, DataType: column.dataType, Input: input, Check: checkBox });
         }
         row = document.createElement('tr');
 
@@ -89,13 +71,50 @@
         findButton = document.createElement("button");
         findButton.setAttribute('onclick', 'FilterFind()');
         findButton.textContent = 'найти';
+        createTableСell(row);// create 2 empty cell
         createTableСell(row);
-        createTableСell(row);
-        createTableСell(row, findButton);
-        //cell.setAttribute('COLSPAN','3');
+        createTableСell(row, findButton);//put button in 3 cell
+
     }
+
     function FilterFind() {
-        //for ( i = 0;i<10);
+        collectiveFilter = new Array();
+
+        for (i = 0; i < FilterElementsArray.length; i++) {
+            
+            var filterItem = FilterElementsArray[i];
+
+            if (filterItem.Check.checked) {
+                filter = new Array();
+                var val = filterItem.Input.value;
+                switch (filterItem.DataType) {
+                    case 'number': {
+                        if (val.includes(',')) {
+                            filter.push(filterCommaSplittedCodition(filterItem.DataField, val));
+                        }
+                        else { filter.push([filterItem.DataField, '=', val]); }
+                    } break;
+                    case 'string': { filter.push([filterItem.DataField, 'contains', val]); }
+                }
+                collectiveFilter.push(filter);
+            }
+        }
+        if (collectiveFilter.length > 0) {
+            resultFilter = new Array();
+            for (i = 0; i < collectiveFilter.length; i++)
+            {
+                resultFilter.push(collectiveFilter[i]);
+                if (collectiveFilter.length > i + 1)
+                {
+                    resultFilter.push('and');
+                }
+
+            }
+            dataGrid.filter(resultFilter);
+      }
+        dataGrid.refresh();
+        console.time("x");
+
     }
 
     function createTableСell(row, el) {
@@ -146,25 +165,29 @@
         if (!check) return;
 
         var inpVal = document.getElementById("inpIdFilter").value;
-        inpVal = inpVal.replace(/\s/g, '').replace(/,+/g, ',');
+        filterCommaSplittedCodition('OrderID', inpVal);
+        ApplayFilterChanges();
+    }
+    function filterCommaSplittedCodition(dataField, inpVal) {
+        inpVal = inpVal.replace(/\s/g, '').replace(/,+/g, ',');//remove repeated commas and spaces
         var arr = inpVal.split(',');
+        filter = new Array();
         if (arr.length == 1 && arr[0] == '') { } else {
             for (f = 0, i = 0; i < arr.length; i++ , f++) {
-                filterC[f] = ["OrderID", "=", arr[i]];
+                filter[f] = [dataField, "=", arr[i]];
                 if (arr.length - 1 > i) {
                     f++;
-                    filterC[f] = 'or'
+                    filter[f] = 'or'
                 }
             }
         }
-        ApplayFilterChanges();
+        return filter;
     }
-
 
 </script>
 <body onload="init()">
     <span>Header</span>
-    <div id="filter"  style="background-color:lightblue">dsds</div>>
+    <div id="filter" style="background-color:lightblue">dsds</div>>
     <br />
     <button onclick="CreateFilter()">CreateFilter</button>
     <button onclick='FilterStatus("All")'>All</button>

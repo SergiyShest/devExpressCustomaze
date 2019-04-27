@@ -1,10 +1,19 @@
 define( [
 	"./core",
+<<<<<<< HEAD
 	"./var/concat",
 	"./var/isFunction",
 	"./var/push",
 	"./core/access",
 	"./manipulation/var/rcheckableType",
+=======
+	"./core/isAttached",
+	"./var/concat",
+	"./var/isFunction",
+	"./var/push",
+	"./var/rcheckableType",
+	"./core/access",
+>>>>>>> master
 	"./manipulation/var/rtagName",
 	"./manipulation/var/rscriptType",
 	"./manipulation/wrapMap",
@@ -23,8 +32,13 @@ define( [
 	"./traversing",
 	"./selector",
 	"./event"
+<<<<<<< HEAD
 ], function( jQuery, concat, isFunction, push, access,
 	rcheckableType, rtagName, rscriptType,
+=======
+], function( jQuery, isAttached, concat, isFunction, push, rcheckableType,
+	access, rtagName, rscriptType,
+>>>>>>> master
 	wrapMap, getAll, setGlobalEval, buildFragment, support,
 	dataPriv, dataUser, acceptData, DOMEval, nodeName ) {
 
@@ -197,11 +211,21 @@ function domManip( collection, args, callback, ignored ) {
 						if ( node.src && ( node.type || "" ).toLowerCase()  !== "module" ) {
 
 							// Optional AJAX dependency, but won't run scripts if not present
+<<<<<<< HEAD
 							if ( jQuery._evalUrl ) {
 								jQuery._evalUrl( node.src );
 							}
 						} else {
 							DOMEval( node.textContent.replace( rcleanScript, "" ), doc, node );
+=======
+							if ( jQuery._evalUrl && !node.noModule ) {
+								jQuery._evalUrl( node.src, {
+									nonce: node.nonce || node.getAttribute( "nonce" )
+								} );
+							}
+						} else {
+							DOMEval( node.textContent.replace( rcleanScript, "" ), node, doc );
+>>>>>>> master
 						}
 					}
 				}
@@ -223,7 +247,11 @@ function remove( elem, selector, keepData ) {
 		}
 
 		if ( node.parentNode ) {
+<<<<<<< HEAD
 			if ( keepData && jQuery.contains( node.ownerDocument, node ) ) {
+=======
+			if ( keepData && isAttached( node ) ) {
+>>>>>>> master
 				setGlobalEval( getAll( node, "script" ) );
 			}
 			node.parentNode.removeChild( node );
@@ -241,7 +269,11 @@ jQuery.extend( {
 	clone: function( elem, dataAndEvents, deepDataAndEvents ) {
 		var i, l, srcElements, destElements,
 			clone = elem.cloneNode( true ),
+<<<<<<< HEAD
 			inPage = jQuery.contains( elem.ownerDocument, elem );
+=======
+			inPage = isAttached( elem );
+>>>>>>> master
 
 		// Fix IE cloning issues
 		if ( !support.noCloneChecked && ( elem.nodeType === 1 || elem.nodeType === 11 ) &&
